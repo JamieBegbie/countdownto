@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Countdown to...</title>
+<link rel="stylesheet" href="countdowntocss.css">
+
+
+</head>
+
+
+    <script type="text/javascript">
+        setInterval(abc, 1000);
+
+        function abc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("container").innerHTML = this.responseText;
+        }
+        };
+        xhttp.open("GET", "stopblinkk.html", true);
+        xhttp.send();
+        }
+
+    </script>
+<body >
+
+  <div id = "container" class="hideblink"></div>
+  <div class="header"></div>
+  <div class="headerfixer"></div>
+  <div class="backgroundhelp"></div>
+
+
+  <button class = "button button1"  onclick = "">Halloween</button>
+  <button class = "button button2"  onclick = "">Christmas</button>
+  <button class = "button button3"  onclick = "">New Year</button>
+
+  <div class="firstHeading">
+    <h1>There are now</h1>
+      <div id = "container" onload="javascript:abc()" class="secondHeading">
+        <p1 id = "demo" ></p1>
+          <div class = "thirdHeading">
+            <h1>Left Until Christmas</h1>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="footer"></div>
+
+</body>
+<script src="countdowntojs.js"></script>
+
+</html>
